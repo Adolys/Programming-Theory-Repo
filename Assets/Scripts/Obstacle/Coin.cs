@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : Obstacle
 {
     public float degreePerSecond = 20.0f;
+    
 
     protected override void OnUnitAction()
     {

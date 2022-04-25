@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8811373875902600623}
   - component: {fileID: 3234686648987687713}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: CoinPrefab
   m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7048f59f772c5a143afc10aed9966115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Speed: 20
+  m_Speed: 30
   degreePerSecond: 200
 --- !u!65 &8811373875902600623
 BoxCollider:

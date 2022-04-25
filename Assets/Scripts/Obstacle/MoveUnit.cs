@@ -6,9 +6,23 @@ public class MoveUnit : MonoBehaviour
 {
     [SerializeField] protected float m_Speed = 20.0f;
 
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+        if(gameManager == null)
+        {
+            Debug.LogError("Game Manager is not valid!");
+        }
+    }
+
     private void LateUpdate()
     {
-        OnUnitAction();
+        if(gameManager.GetGameState() == EGameState.Play)
+        {
+            OnUnitAction();
+        }
     }
 
     protected virtual void OnUnitAction()

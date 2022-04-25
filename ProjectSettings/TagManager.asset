@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Coin
   - KillZone
-  - Crate
+  - Obstacle
   layers:
   - Default
   - TransparentFX

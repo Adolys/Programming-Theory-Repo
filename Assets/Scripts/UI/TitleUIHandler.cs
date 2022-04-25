@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 
 public class TitleUIHandler : MonoBehaviour
@@ -13,18 +14,14 @@ public class TitleUIHandler : MonoBehaviour
 
     private void Start()
     {
-        if(startButton != null)
+        if(startButton)
         {
             startButton.onClick.AddListener(OnClick_Start);
         }
-    }
 
-    private void LateUpdate()
-    {
-        if(clickText != null)
+        if(clickText)
         {
-            float alpha = Mathf.PingPong(Time.time, 1.0f);
-            clickText.alpha = alpha;
+            clickText.DOFade(0.0f, 1.0f).SetLoops(-1, LoopType.Yoyo);
         }
     }
 

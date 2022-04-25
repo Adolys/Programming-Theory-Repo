@@ -9,8 +9,6 @@ public class GameInstance : Singleton<GameInstance>
     public GameInstance()
     {
         characterIndex = 0;
-
-        Debug.Log("Call GameInstace constructor!");
     }
 
     public int GetCharacterIndex()
@@ -21,7 +19,5 @@ public class GameInstance : Singleton<GameInstance>
     public void SetCharacterIndex(int index)
     {
         characterIndex = index;
-
-        Debug.Log("Selected Character Index : " + characterIndex);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Character : MonoBehaviour
 {
@@ -23,15 +24,6 @@ public class Character : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
-    {
-        if (gameManager.GetGameState() == EGameState.Play)
-        {
-            float scaleY = Mathf.PingPong(Time.time, 0.2f);
-            transform.localScale = new Vector3(1.0f, 1.0f + scaleY, 1.0f);
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Coin"))
@@ -51,7 +43,15 @@ public class Character : MonoBehaviour
                 characterRb.AddForce(new Vector3(0.0f, 5.0f, -0.5f), ForceMode.Impulse);
             }
 
+            transform.DOKill();
+
             gameManager.SetGameState(EGameState.End);
         }
+    }
+
+    public void StartRunning()
+    {
+        //  scale pingpong
+        transform.DOScaleY(1.2f, 0.3f).SetLoops(-1, LoopType.Yoyo);
     }
 }

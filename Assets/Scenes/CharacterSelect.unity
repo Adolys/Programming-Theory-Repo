@@ -421,7 +421,6 @@ GameObject:
   m_Component:
   - component: {fileID: 320965006}
   - component: {fileID: 320965008}
-  - component: {fileID: 320965007}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -444,14 +443,6 @@ Transform:
   m_Father: {fileID: 1983634726}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &320965007
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320965005}
-  m_Enabled: 1
 --- !u!20 &320965008
 Camera:
   m_ObjectHideFlags: 0
@@ -505,7 +496,6 @@ GameObject:
   m_Component:
   - component: {fileID: 544396978}
   - component: {fileID: 544396980}
-  - component: {fileID: 544396979}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -528,14 +518,6 @@ Transform:
   m_Father: {fileID: 1061447007}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &544396979
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544396977}
-  m_Enabled: 1
 --- !u!20 &544396980
 Camera:
   m_ObjectHideFlags: 0
@@ -692,7 +674,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &689167055
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1085,7 +1067,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &914548340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1207,7 +1189,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &930753752
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1636,7 +1618,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1239978676}
   - component: {fileID: 1239978678}
-  - component: {fileID: 1239978677}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1659,14 +1640,6 @@ Transform:
   m_Father: {fileID: 971149954}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1239978677
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239978675}
-  m_Enabled: 1
 --- !u!20 &1239978678
 Camera:
   m_ObjectHideFlags: 0
@@ -1823,7 +1796,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &1280436904
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1955,6 +1928,11 @@ MonoBehaviour:
   selectButton2: {fileID: 914548338}
   selectButton3: {fileID: 930753750}
   selectButton4: {fileID: 689167053}
+  selectButtons:
+  - {fileID: 1280436902}
+  - {fileID: 914548338}
+  - {fileID: 930753750}
+  - {fileID: 689167053}
   startButton: {fileID: 731243420}
 --- !u!1 &1480773618
 GameObject:
@@ -1966,7 +1944,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1480773619}
   - component: {fileID: 1480773621}
-  - component: {fileID: 1480773620}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1989,14 +1966,6 @@ Transform:
   m_Father: {fileID: 256612060}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1480773620
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480773618}
-  m_Enabled: 1
 --- !u!20 &1480773621
 Camera:
   m_ObjectHideFlags: 0

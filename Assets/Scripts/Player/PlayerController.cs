@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Vector3 startPos = new Vector3(0.0f, 4.3f, 3.5f);
     [SerializeField] private float m_Speed = 20.0f;
     [SerializeField] private float maxPositionX = 6.5f;
 

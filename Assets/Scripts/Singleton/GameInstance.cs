@@ -21,5 +21,7 @@ public class GameInstance : Singleton<GameInstance>
     public void SetCharacterIndex(int index)
     {
         characterIndex = index;
+
+        Debug.Log("Selected Character Index : " + characterIndex);
     }
 }

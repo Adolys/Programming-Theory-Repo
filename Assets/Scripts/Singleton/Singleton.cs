@@ -3,13 +3,16 @@ public class Singleton<T> where T : new()
 {
     protected static T instance;
 
-    protected static T GetInstance()
+    public static T Instance
     {
-        if(instance == null)
+        get
         {
-            instance = new T();
-        }
+            if (instance == null)
+            {
+                instance = new T();
+            }
 
-        return instance;
+            return instance;
+        }
     }
 }

@@ -46,7 +46,7 @@ public class Character : MonoBehaviour
 
             transform.DOKill();
             
-            gameManager.ShowHitObstacle(collision.contacts[0].point);
+            gameManager.ShowHitObstacle(collision.GetContact(0).point);
 
             gameManager.SetGameState(EGameState.End);
         }

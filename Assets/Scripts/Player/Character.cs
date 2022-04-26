@@ -28,6 +28,7 @@ public class Character : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Coin"))
         {
+            gameManager.ShowGetCoin(other.transform.position);
             gameManager.AddScore();
             Destroy(other.gameObject);
         }
@@ -44,6 +45,8 @@ public class Character : MonoBehaviour
             }
 
             transform.DOKill();
+            
+            gameManager.ShowHitObstacle(collision.contacts[0].point);
 
             gameManager.SetGameState(EGameState.End);
         }

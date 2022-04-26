@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
     public GameUIHandler uiHandler;
     public List<Character> PlayerPrefabs;
 
+    public GameObject hitObstacleVfx;
+    public GameObject breakHeartVfx;
+    public GameObject getCoinVfx;
+
     [SerializeField] private Vector3 startPos = new Vector3(0.0f, 4.3f, 3.5f);
     private EGameState m_State;
     private int m_Score;
@@ -69,7 +73,7 @@ public class GameManager : MonoBehaviour
                 break;
             case EGameState.End:
                 spawnManager.isSpawnable = false;
-                uiHandler.ShowGameOver();
+                StartCoroutine(OnGameOver());
                 break;
         }
     }
@@ -81,6 +85,13 @@ public class GameManager : MonoBehaviour
         SetGameState(EGameState.Play);
     }
 
+    IEnumerator OnGameOver()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        uiHandler.ShowGameOver();
+    }
+
     public EGameState GetGameState()
     {
         return m_State;
@@ -89,5 +100,33 @@ public class GameManager : MonoBehaviour
     public void AddScore()
     {
         uiHandler.SetScore(++m_Score);
+    }
+
+    public void ShowHitObstacle(Vector3 position)
+    {
+        if(hitObstacleVfx)
+        {
+            hitObstacleVfx.transform.position =  new Vector3(position.x, position.y + 1.5f, position.z);
+            hitObstacleVfx.SetActive(true);
+        }
+
+        ShowBreakHerat(position);
+    }
+
+    public void ShowGetCoin(Vector3 position)
+    {
+        if(getCoinVfx)
+        {
+            Instantiate(getCoinVfx, new Vector3(position.x, position.y + 3.0f, position.z), getCoinVfx.transform.rotation);
+        }
+    }
+
+    private void ShowBreakHerat(Vector3 position)
+    {
+        if(breakHeartVfx)
+        {
+            breakHeartVfx.transform.position = new Vector3(position.x, position.y + 2.0f, position.z);
+            breakHeartVfx.SetActive(true);
+        }
     }
 }
